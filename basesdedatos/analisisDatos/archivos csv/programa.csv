@@ -1,0 +1,6 @@
+"id","nombre","descripcion","categoria","fecha_inicio","fecha_fin","duracion_minutos","especial","id_categoria"
+1,"Cortá por Lozano","Programa de entretenimiento conducido por Verónica Lozano con invitados, juegos y actualidad","Entretenimiento","2020-03-01","",120,0,1
+2,"Telefe Noticias","Noticiero central de Telefe con Rodolfo Barili","Noticias","2015-01-01","",60,0,2
+3,"Bendita TV","Programa de humor y actualidad conducido por Beto Casella","Entretenimiento","2005-03-14","",90,0,3
+4,"Nadie Dice Nada","Streaming de humor con Nico Occhiato en Luzu TV","Entretenimiento","2022-06-01","",180,0,4
+5,"Gelatina","Programa de streaming conducido por Migue Granados en Olga","Cultura","2021-09-15","",120,0,5
