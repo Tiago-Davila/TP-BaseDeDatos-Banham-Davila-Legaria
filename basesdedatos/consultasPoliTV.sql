@@ -1,9 +1,10 @@
 -- b
 -- verificar tabla de prohibidoscategoria
 DELIMITER //
-create trigger verificarPalabrasProhibidas before insert on publicacion for each row
+create trigger verificarPalabrasProhibidas before insert on publicacion 
+for each row
 begin
-    if new.contenido in (select palabra from palabraprohibida) then
+    if exists(select 1 from palabraprohibida where new.contenido like concat('%', palabra, '%')) then
         set new.estado_publicacion = 'PENDIENTE_REVISION';
     end if;
 end//
@@ -212,7 +213,7 @@ INSERT INTO palabraprohibida (palabra) VALUES
 ('ofensa1');
 
 -- insert para probar el trigger del punto b
-insert into publicacion value(77772, 1, 1, "chau", curdate(), "PUBLICADO", NULL, 0);
+insert into publicacion value(77772, 1, 1, "chauspam,asdasd", curdate(), "PUBLICADO", NULL, 0);
 
 -- llamado al procedimiento del punto c
 call cantidadLikes(1);
